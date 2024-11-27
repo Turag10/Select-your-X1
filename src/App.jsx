@@ -72,7 +72,6 @@ const App = () => {
   const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [view, setView] = useState("players"); // Manage views: "players" or "selected"
 
-  // Handle choosing a player
   const handleChoosePlayer = (player) => {
     if (selectedPlayers.length >= 6) {
       alert("You can only select up to 6 players.");
@@ -81,6 +80,11 @@ const App = () => {
 
     if (money < player.price) {
       alert("Insufficient funds to select this player.");
+      return;
+    }
+
+    if (selectedPlayers.some((p) => p.id === player.id)) {
+      alert("Player is already selected!");
       return;
     }
 
@@ -110,4 +114,3 @@ const App = () => {
 };
 
 export default App;
-

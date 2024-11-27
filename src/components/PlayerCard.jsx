@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-const PlayerCard = ({player}) => {
-    return (
-        <div className="border rounded-lg shadow-md p-4 bg-white">
+const PlayerCard = ({ player, onChoosePlayer, isSelected }) => {
+  return (
+    <div className="border rounded-lg shadow-md p-4 bg-white">
       <img
         src={`/src/assets/image/${player.image}`}
         alt={player.name}
@@ -24,24 +24,34 @@ const PlayerCard = ({player}) => {
           <strong>Price:</strong> ₹{player.price.toLocaleString()}
         </p>
       </div>
-      <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
-        Choose Player
+      <button
+        className={`mt-4 w-full ${
+          isSelected
+            ? "bg-gray-500 text-gray-300 cursor-not-allowed"
+            : "bg-blue-500 text-white hover:bg-blue-600"
+        } py-2 rounded-md`}
+        onClick={() => !isSelected && onChoosePlayer(player)}
+        disabled={isSelected}
+      >
+        {isSelected ? "Selected" : "Choose Player"}
       </button>
     </div>
-    );
+  );
 };
 
 PlayerCard.propTypes = {
-    player: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      country: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-      rating: PropTypes.string.isRequired,
-      style: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
-      image: PropTypes.string.isRequired,
-    }).isRequired,
-  };
+  player: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    rating: PropTypes.string.isRequired,
+    style: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+  }).isRequired,
+  onChoosePlayer: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+};
 
 export default PlayerCard;

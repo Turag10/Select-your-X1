@@ -6,7 +6,7 @@
       "role": "All-Rounder",
       "rating": "9.5",
       "style": "Right-Hand Bat",
-      "price": 1600000,
+      "price": 10000,
       "image": "babar.jpg"
     },
     {
@@ -16,7 +16,7 @@
       "role": "Batsman",
       "rating": "9.2",
       "style": "Right-Hand Bat",
-      "price": 1500000,
+      "price": 5000,
       "image": "ab.jpg"
     },
     {

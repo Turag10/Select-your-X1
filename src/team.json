@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "Babar Azam",
+      "country": "pakistan",
+      "role": "All-Rounder",
+      "rating": "9.5",
+      "style": "Right-Hand Bat",
+      "price": 1600000,
+      "image": "babar.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ab de villiars",
+      "country": "RSA",
+      "role": "Batsman",
+      "rating": "9.2",
+      "style": "Right-Hand Bat",
+      "price": 1500000,
+      "image": "ab.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Tamim iqbal",
+      "country": "Bangladesh",
+      "role": "Batsman",
+      "rating": "9.1",
+      "style": "Right-Hand Bat",
+      "price": 1400000,
+      "image": "tamim.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Kane williamson",
+      "country": "New-zealand",
+      "role": "Batsman",
+      "rating": "9.4",
+      "style": "Right-Hand Bat",
+      "price": 1550000,
+      "image": "kane.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Glen-Maxwell",
+      "country": "Australia",
+      "role": "All-Rounder",
+      "rating": "9.0",
+      "style": "Right-Hand Bat",
+      "price": 1450000,
+      "image": "azmol.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dale steyn",
+      "country": "RSA",
+      "role": "Batsman",
+      "rating": "8.8",
+      "style": "Fast-bowler",
+      "price": 1350000,
+      "image": "azmol.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Syed Azmol",
+      "country": "pakistan",
+      "role": "Bowler",
+      "rating": "8.9",
+      "style": "Right-Hand Bat",
+      "price": 1400000,
+      "image": "azmol.jpg"
+    }
+  ]
+  

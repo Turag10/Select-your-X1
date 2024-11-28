@@ -26,7 +26,7 @@
       "role": "Batsman",
       "rating": "9.1",
       "style": "Right-Hand Bat",
-      "price": 1400000,
+      "price": 1400,
       "image": "tamim.jpg"
     },
     {
@@ -36,7 +36,7 @@
       "role": "Batsman",
       "rating": "9.4",
       "style": "Right-Hand Bat",
-      "price": 1550000,
+      "price": 1550,
       "image": "kane.jpg"
     },
     {
@@ -46,8 +46,8 @@
       "role": "All-Rounder",
       "rating": "9.0",
       "style": "Right-Hand Bat",
-      "price": 1450000,
-      "image": "azmol.jpg"
+      "price": 14500,
+      "image": "maxxi.jpg"
     },
     {
       "id": 6,
@@ -56,8 +56,8 @@
       "role": "Batsman",
       "rating": "8.8",
       "style": "Fast-bowler",
-      "price": 1350000,
-      "image": "azmol.jpg"
+      "price": 1350,
+      "image": "Dale.jpg"
     },
     {
       "id": 7,

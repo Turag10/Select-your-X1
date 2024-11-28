@@ -7,7 +7,7 @@ const Navbar = ({ money }) => {
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-start justify-between h-16">
+        <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <img
               src="/src/assets/image/logo.png"
@@ -92,21 +92,55 @@ const App = () => {
     setSelectedPlayers((prev) => [...prev, player]);
   };
 
+  const handleRemovePlayer = (playerId) => {
+    const playerToRemove = selectedPlayers.find((p) => p.id === playerId);
+    setMoney((prev) => prev + playerToRemove.price);
+    setSelectedPlayers((prev) => prev.filter((player) => player.id !== playerId));
+  };
+
   return (
     <>
       <Navbar money={money} />
       <HeroSection setMoney={setMoney} />
+      <div className="flex justify-end mt-4 px-4">
+  <button
+    className={`px-6 py-2 text-lg font-semibold ${
+      view === "players"
+        ? "bg-yellow-500 text-white"
+        : "bg-gray-100 text-gray-800"
+    } border-b-4 ${
+      view === "players" ? "border-yellow-600" : "border-gray-300"
+    } rounded-t-md`}
+    onClick={() => setView("players")}
+  >
+    Available
+  </button>
+  <button
+    className={`ml-4 px-6 py-2 text-lg font-semibold ${
+      view === "selected"
+        ? "bg-yellow-500 text-white"
+        : "bg-gray-100 text-gray-800"
+    } border-b-4 ${
+      view === "selected" ? "border-yellow-600" : "border-gray-300"
+    } rounded-t-md`}
+    onClick={() => setView("selected")}
+  >
+    Selected ({selectedPlayers.length})
+  </button>
+</div>
+
+
+
       {view === "players" ? (
         <PlayerSec
           players={playerData}
           onChoosePlayer={handleChoosePlayer}
           selectedPlayers={selectedPlayers}
-          setView={setView}
         />
       ) : (
         <SelectedPlayers
           selectedPlayers={selectedPlayers}
-          setView={setView}
+          onRemovePlayer={handleRemovePlayer}
         />
       )}
     </>

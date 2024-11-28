@@ -20,7 +20,7 @@ const PlayerSec = ({ players, onChoosePlayer, selectedPlayers, setView }) => {
           onClick={() => setView("selected")}
           className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
         >
-          View Selected Players
+           Selected 
         </button>
       </div>
     </section>
